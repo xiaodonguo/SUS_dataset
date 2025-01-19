@@ -1,1 +1,3 @@
-# SUS_dataset
+# MCNet-S* & SUS Dataset
+## Introduction
+This repository contains the code for MCNet-S* and the SUS dataset. Our manuscript "Transferring Prior Thermal Knowledge for Snowy Urban Scene Semantic Segmentation" has been submitted to IEEE Transactions on Intelligent Transportation Systems. The original text and experimental results will be added to the repository as soon as the paper is accepted. Here, we have released the code and dataset for the convenience of the review process. The pretrained weights of MCNet-S* and SUS dataset can be found in "https://pan.baidu.com/s/1Z3Zvo4cVD487kdmoZmt-Yg" code: xejn
