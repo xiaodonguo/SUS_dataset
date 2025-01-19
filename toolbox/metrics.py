@@ -54,14 +54,14 @@ class runningScore(object):
         cls_acc = np.diag(hist) / hist.sum(axis=1)
         acc_cls = np.nanmean(cls_acc)
         iu = np.diag(hist) / (hist.sum(axis=1) + hist.sum(axis=0) - np.diag(hist))
-        mean_iou = np.nanmean(iu)
+        mean_iou = np.nanmean(iu[1:])
         freq = hist.sum(axis=1) / hist.sum()
         fw_iou = (freq[freq > 0] * iu[freq > 0]).sum()
         # F1-score
         precision = np.diag(hist) / (hist.sum(axis=0) + 1e-7)
         recall = np.diag(hist) / (hist.sum(axis=1) + 1e-7)
         f1_scores = 2 * precision * recall / (precision + recall + 1e-7)
-        mean_f1_score = np.nanmean(f1_scores)
+        mean_f1_score = np.nanmean(f1_scores[1:])
 
         # set unlabel as nan
         if self.ignore_index is not None:
